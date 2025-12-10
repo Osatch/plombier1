@@ -1,0 +1,1822 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Plombier d’Urgence & Dépannage | Votre Plombier de Confiance</title>
+
+  <!-- SEO de base -->
+  <meta name="description" content="Plombier d’urgence 7j/7, dépannage rapide, installation et rénovation de plomberie. Devis gratuit, intervention en moins de 30 minutes selon disponibilité.">
+  <meta name="keywords" content="plombier, plomberie, dépannage plomberie, urgence plombier, fuite d’eau, débouchage, chauffe-eau, installation salle de bain">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Open Graph (réseaux sociaux) -->
+  <meta property="og:title" content="Plombier d’Urgence & Dépannage | Votre Plombier de Confiance">
+  <meta property="og:description" content="Plombier professionnel pour dépannage rapide, installation, rénovation et entretien. Devis gratuit, intervention rapide.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.votreplombier.fr/">
+  <meta property="og:image" content="https://www.votreplombier.fr/images/preview-plombier.jpg">
+
+  <!-- Données structurées LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Plumber",
+    "name": "Votre Plombier de Confiance",
+    "image": "https://www.votreplombier.fr/images/preview-plombier.jpg",
+    "url": "https://www.votreplombier.fr/",
+    "telephone": "+33 6 12 34 56 78",
+    "priceRange": "€€",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "12 Rue des Artisans",
+      "addressLocality": "VotreVille",
+      "postalCode": "75000",
+      "addressCountry": "FR"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "19:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "09:00",
+        "closes": "17:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/votreplombier",
+      "https://www.instagram.com/votreplombier"
+    ]
+  }
+  </script>
+
+  <!-- Police moderne (optionnel) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-primary: #0f7ae5;
+      --color-primary-dark: #0753a8;
+      --color-accent: #00c3a5;
+      --color-bg: #050816;
+      --color-bg-soft: #0b1220;
+      --color-bg-card: #0f172a;
+      --color-text: #e5e7eb;
+      --color-muted: #9ca3af;
+      --shadow-soft: 0 20px 40px rgba(15, 23, 42, 0.7);
+      --radius-lg: 18px;
+      --radius-xl: 24px;
+      --transition-fast: 0.2s ease-in-out;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #0b1120 0, #020617 40%, #000 100%);
+      color: var(--color-text);
+      scroll-behavior: smooth;
+    }
+
+    body {
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Layout général */
+    .page-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1 0 auto;
+    }
+
+    footer {
+      flex-shrink: 0;
+    }
+
+    /* Header / Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(to bottom, rgba(15,23,42,0.95), rgba(15,23,42,0.70), transparent);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+    }
+
+    .nav-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, #e5f2ff, #1d4ed8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 20px;
+      color: white;
+      box-shadow: 0 0 0 2px rgba(59,130,246,0.4), 0 12px 24px rgba(15,23,42,0.7);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+    .brand-tagline {
+      font-size: 11px;
+      color: var(--color-muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--color-muted);
+      padding: 6px 8px;
+      border-radius: 999px;
+      transition: color var(--transition-fast), background-color var(--transition-fast), transform var(--transition-fast);
+      cursor: pointer;
+    }
+
+    .nav-links a:hover {
+      color: #f9fafb;
+      background-color: rgba(15,118,110,0.16);
+      transform: translateY(-1px);
+    }
+
+    .nav-links a.nav-link-active {
+      color: #f9fafb;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-phone {
+      font-size: 13px;
+      color: var(--color-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .nav-phone span {
+      font-weight: 600;
+      color: #e5e7eb;
+    }
+
+    .btn-primary {
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+      border: none;
+      color: white;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      box-shadow: 0 12px 24px rgba(37, 99, 235, 0.4);
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), filter var(--transition-fast);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 20px 40px rgba(37, 99, 235, 0.5);
+      filter: brightness(1.05);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+      box-shadow: 0 10px 20px rgba(15, 23, 42, 0.7);
+    }
+
+    .burger {
+      display: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.9);
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .burger-line {
+      width: 18px;
+      height: 2px;
+      border-radius: 999px;
+      background: #e5e7eb;
+      position: relative;
+    }
+
+    .burger-line::before,
+    .burger-line::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 18px;
+      height: 2px;
+      border-radius: 999px;
+      background: #e5e7eb;
+      transition: transform var(--transition-fast), top var(--transition-fast), opacity var(--transition-fast);
+    }
+
+    .burger-line::before {
+      top: -6px;
+    }
+
+    .burger-line::after {
+      top: 6px;
+    }
+
+    .burger-open .burger-line {
+      background: transparent;
+    }
+
+    .burger-open .burger-line::before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+
+    .burger-open .burger-line::after {
+      top: 0;
+      transform: rotate(-45deg);
+    }
+
+    /* Menu mobile */
+    .mobile-menu {
+      display: none;
+      padding: 0 16px 12px;
+    }
+
+    .mobile-menu-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      border-radius: 16px;
+      background: rgba(15, 23, 42, 0.96);
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      animation: fadeDown 0.2s ease-out;
+    }
+
+    .mobile-menu a {
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 14px;
+      color: var(--color-muted);
+      font-weight: 500;
+    }
+
+    .mobile-menu a:hover {
+      background-color: rgba(31, 41, 55, 0.9);
+      color: #f9fafb;
+    }
+
+    .mobile-menu .btn-primary {
+      width: 100%;
+      justify-content: center;
+    }
+
+    @keyframes fadeDown {
+      from {
+        opacity: 0;
+        transform: translateY(-8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Hero */
+    .hero-section {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 30px 16px 40px;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
+      gap: 28px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border-radius: 999px;
+      padding: 4px 10px;
+      background: rgba(15, 118, 110, 0.2);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #a5f3fc;
+      margin-bottom: 10px;
+    }
+
+    .eyebrow-pill {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, #f9fafb, #22c55e);
+      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.18);
+    }
+
+    .hero-title {
+      font-size: clamp(30px, 4vw, 38px);
+      line-height: 1.1;
+      letter-spacing: 0.02em;
+      margin-bottom: 14px;
+    }
+
+    .hero-highlight {
+      background: linear-gradient(120deg, #38bdf8, #22c55e);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 15px;
+      color: var(--color-muted);
+      max-width: 520px;
+      margin-bottom: 18px;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .badge {
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 11px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      color: #e5e7eb;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #22c55e;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+
+    .btn-secondary {
+      border-radius: 999px;
+      padding: 8px 16px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      background: rgba(15, 23, 42, 0.95);
+      color: var(--color-text);
+      font-size: 13px;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: background-color var(--transition-fast), transform var(--transition-fast), border-color var(--transition-fast);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(30, 64, 175, 0.8);
+      border-color: rgba(129, 140, 248, 0.9);
+      transform: translateY(-1px);
+    }
+
+    .hero-note {
+      font-size: 12px;
+      color: var(--color-muted);
+    }
+
+    .hero-note b {
+      color: #e5e7eb;
+    }
+
+    .hero-right-card {
+      border-radius: var(--radius-xl);
+      background: radial-gradient(circle at top left, #0ea5e9 0, #0b1120 40%, #020617 100%);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      box-shadow: var(--shadow-soft);
+      padding: 16px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-right-card::before {
+      content: "";
+      position: absolute;
+      inset: -60%;
+      background:
+        radial-gradient(circle at 10% 0, rgba(96, 165, 250, 0.22) 0, transparent 40%),
+        radial-gradient(circle at 100% 0, rgba(52, 211, 153, 0.25) 0, transparent 40%),
+        radial-gradient(circle at 50% 100%, rgba(59, 130, 246, 0.35) 0, transparent 45%);
+      opacity: 0.75;
+      pointer-events: none;
+    }
+
+    .hero-right-content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .hero-mini-title {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #e0f2fe;
+      margin-bottom: 4px;
+    }
+
+    .hero-metric-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .hero-metric-main {
+      font-size: 24px;
+      font-weight: 700;
+      color: #f9fafb;
+    }
+
+    .hero-metric-sub {
+      font-size: 12px;
+      color: #e5e7eb;
+      max-width: 180px;
+    }
+
+    .hero-metric-tag {
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      color: #e5e7eb;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .hero-grid-card {
+      border-radius: 14px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      padding: 8px 10px;
+      font-size: 11px;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .hero-grid-label {
+      color: #9ca3af;
+      font-size: 11px;
+    }
+
+    .hero-grid-value {
+      color: #e5e7eb;
+      font-weight: 600;
+    }
+
+    .hero-status-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-top: 8px;
+      font-size: 11px;
+      color: #e5e7eb;
+    }
+
+    .hero-status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(22, 163, 74, 0.9);
+      color: white;
+      font-size: 11px;
+    }
+
+    /* Sections génériques */
+    .section {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 22px 16px 32px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .section-subtitle {
+      font-size: 13px;
+      color: var(--color-muted);
+      max-width: 460px;
+    }
+
+    .section-tag {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #6ee7b7;
+    }
+
+    /* Services */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      border-radius: var(--radius-lg);
+      background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.15), rgba(15, 23, 42, 0.95));
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      box-shadow: 0 16px 30px rgba(15, 23, 42, 0.8);
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 22px 40px rgba(15, 23, 42, 0.9);
+      border-color: rgba(96, 165, 250, 0.8);
+    }
+
+    .card-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at 30% 30%, #dbeafe, #1d4ed8);
+      font-size: 18px;
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.7);
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .card-text {
+      font-size: 13px;
+      color: var(--color-muted);
+    }
+
+    .card-list {
+      margin-top: 4px;
+      list-style: none;
+      padding-left: 0;
+      font-size: 13px;
+      color: #e5e7eb;
+    }
+
+    .card-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      margin-bottom: 4px;
+    }
+
+    .card-list li span {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    /* Section Urgence */
+    .emergency-section {
+      border-radius: var(--radius-xl);
+      padding: 16px;
+      background: radial-gradient(circle at top left, rgba(239, 68, 68, 0.25), #020617);
+      border: 1px solid rgba(248, 113, 113, 0.5);
+      box-shadow: 0 18px 40px rgba(127, 29, 29, 0.7);
+      display: grid;
+      grid-template-columns: 2.2fr 2fr;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .emergency-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(127, 29, 29, 0.9);
+      color: #fee2e2;
+      margin-bottom: 8px;
+    }
+
+    .emergency-title {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .emergency-text {
+      font-size: 13px;
+      color: #fee2e2;
+      margin-bottom: 12px;
+    }
+
+    .emergency-phone {
+      font-size: 18px;
+      font-weight: 700;
+      color: #fee2e2;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .emergency-phone span {
+      font-size: 13px;
+      font-weight: 500;
+      color: #fecaca;
+    }
+
+    .emergency-tagline {
+      font-size: 12px;
+      color: #fecaca;
+    }
+
+    .emergency-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      font-size: 12px;
+      color: #fee2e2;
+    }
+
+    .emergency-small-card {
+      border-radius: 14px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(248, 250, 252, 0.2);
+      padding: 8px;
+    }
+
+    .emergency-label {
+      font-size: 11px;
+      color: #fca5a5;
+      margin-bottom: 2px;
+    }
+
+    /* Devis & Tarifs */
+    .split-layout {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 18px;
+    }
+
+    .text-block {
+      font-size: 13px;
+      color: var(--color-muted);
+      line-height: 1.7;
+    }
+
+    .text-block p + p {
+      margin-top: 8px;
+    }
+
+    .price-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .price-card {
+      border-radius: 14px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      padding: 8px;
+      font-size: 12px;
+    }
+
+    .price-name {
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .price-range {
+      color: #e5e7eb;
+    }
+
+    .price-note {
+      font-size: 11px;
+      color: var(--color-muted);
+      margin-top: 2px;
+    }
+
+    /* Formulaires */
+    .form-card {
+      border-radius: var(--radius-lg);
+      background: rgba(15, 23, 42, 0.96);
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      padding: 12px;
+      box-shadow: 0 16px 34px rgba(15, 23, 42, 0.85);
+    }
+
+    .form-title {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .form-group {
+      margin-bottom: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .form-label {
+      font-size: 12px;
+      color: var(--color-muted);
+    }
+
+    .form-label span {
+      color: #f97316;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      border-radius: 10px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.96);
+      padding: 8px 10px;
+      font-size: 13px;
+      color: var(--color-text);
+      outline: none;
+      transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+    }
+
+    .form-input::placeholder,
+    .form-textarea::placeholder {
+      color: rgba(148, 163, 184, 0.7);
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      border-color: rgba(59, 130, 246, 0.9);
+      box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.7);
+      background: rgba(15, 23, 42, 0.98);
+    }
+
+    .form-textarea {
+      min-height: 80px;
+      resize: vertical;
+    }
+
+    .form-hint {
+      font-size: 11px;
+      color: var(--color-muted);
+      margin-bottom: 8px;
+    }
+
+    .form-footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .form-status {
+      font-size: 12px;
+      color: var(--color-muted);
+    }
+
+    .form-status-success {
+      color: #4ade80;
+    }
+
+    .form-status-error {
+      color: #fb7185;
+    }
+
+    /* À propos & Avis */
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 18px;
+    }
+
+    .about-text {
+      font-size: 13px;
+      color: var(--color-muted);
+    }
+
+    .about-text p + p {
+      margin-top: 8px;
+    }
+
+    .list-check {
+      margin-top: 10px;
+      list-style: none;
+      padding-left: 0;
+      font-size: 13px;
+      color: #e5e7eb;
+    }
+
+    .list-check li {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      margin-bottom: 5px;
+    }
+
+    .list-check li span {
+      font-size: 15px;
+      line-height: 20px;
+      color: #22c55e;
+    }
+
+    .reviews-card {
+      border-radius: var(--radius-lg);
+      background: rgba(15, 23, 42, 0.96);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      padding: 12px;
+    }
+
+    .stars {
+      color: #facc15;
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    .review-text {
+      font-size: 13px;
+      color: var(--color-muted);
+      margin-bottom: 6px;
+    }
+
+    .review-author {
+      font-size: 12px;
+      color: #e5e7eb;
+      font-weight: 500;
+    }
+
+    .review-meta {
+      font-size: 11px;
+      color: var(--color-muted);
+    }
+
+    .reviews-small {
+      margin-top: 8px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      font-size: 11px;
+      color: var(--color-muted);
+    }
+
+    .reviews-kpi {
+      border-radius: 12px;
+      border: 1px dashed rgba(148, 163, 184, 0.7);
+      padding: 8px;
+      text-align: center;
+    }
+
+    .reviews-kpi strong {
+      font-size: 16px;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    /* Contact */
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 18px;
+    }
+
+    .contact-info-block {
+      border-radius: var(--radius-lg);
+      background: rgba(15, 23, 42, 0.96);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      padding: 12px;
+      font-size: 13px;
+      color: var(--color-muted);
+    }
+
+    .info-row {
+      margin-bottom: 6px;
+    }
+
+    .info-label {
+      font-size: 12px;
+      color: #9ca3af;
+    }
+
+    .info-value {
+      color: #e5e7eb;
+      font-weight: 500;
+    }
+
+    .info-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+
+    .info-badge {
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      color: #e5e7eb;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid rgba(30, 64, 175, 0.7);
+      background: linear-gradient(to top, #020617, #020617e6);
+      padding: 16px;
+      font-size: 12px;
+      color: var(--color-muted);
+    }
+
+    .footer-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      text-underline-offset: 3px;
+    }
+
+    .footer-badge {
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      color: #e5e7eb;
+    }
+
+    /* Responsiveness */
+    @media (max-width: 960px) {
+      .hero-section {
+        grid-template-columns: minmax(0, 1.1fr);
+      }
+
+      .hero-right-card {
+        order: -1;
+      }
+
+      .card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .emergency-section {
+        grid-template-columns: minmax(0, 1.1fr);
+      }
+
+      .split-layout,
+      .about-layout,
+      .contact-layout {
+        grid-template-columns: minmax(0, 1.1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .burger {
+        display: inline-flex;
+      }
+
+      .mobile-menu {
+        display: block;
+      }
+
+      .hero-section {
+        padding-top: 18px;
+      }
+
+      .section {
+        padding-top: 18px;
+        padding-bottom: 24px;
+      }
+
+      .card-grid {
+        grid-template-columns: minmax(0, 1.1fr);
+      }
+
+      .emergency-section {
+        padding: 12px;
+      }
+
+      .form-row {
+        grid-template-columns: minmax(0, 1.1fr);
+      }
+
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+  <header>
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="brand-logo">P</div>
+        <div class="brand-text">
+          <div class="brand-name">Plombier d’Urgence</div>
+          <div class="brand-tagline">Dépannage 7j/7 & Devis instantané</div>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#accueil" class="nav-link nav-link-active">Accueil</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#urgence" class="nav-link">Urgence</a>
+        <a href="#devis" class="nav-link">Devis & tarifs</a>
+        <a href="#apropos" class="nav-link">À propos & avis</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <div class="nav-phone">
+          24h/24 &nbsp;•&nbsp; <span>06 12 34 56 78</span>
+        </div>
+        <button class="btn-primary" data-scroll="#devis">
+          Demander un devis
+        </button>
+        <button class="burger" aria-label="Menu" id="burger-button">
+          <div class="burger-line"></div>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="mobile-menu-inner">
+        <a href="#accueil" class="mobile-link">Accueil</a>
+        <a href="#services" class="mobile-link">Services</a>
+        <a href="#urgence" class="mobile-link">Urgence</a>
+        <a href="#devis" class="mobile-link">Devis & tarifs</a>
+        <a href="#apropos" class="mobile-link">À propos & avis</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+        <button class="btn-primary" data-scroll="#devis">
+          Devis en ligne
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Accueil / Hero -->
+    <section id="accueil" class="hero-section">
+      <div>
+        <div class="eyebrow">
+          <div class="eyebrow-pill"></div>
+          Plombier agréé • Intervention rapide
+        </div>
+        <h1 class="hero-title">
+          Plombier <span class="hero-highlight">d’urgence et de confiance</span><br>
+          pour tous vos problèmes d’eau.
+        </h1>
+        <p class="hero-subtitle">
+          Fuite, canalisation bouchée, chauffe-eau en panne, rénovation complète de salle de bain :
+          nous intervenons rapidement pour sécuriser, réparer et vous accompagner, sans mauvaises surprises.
+        </p>
+
+        <div class="hero-badges">
+          <div class="badge">
+            <div class="badge-dot"></div>
+            Dépannage 7j/7
+          </div>
+          <div class="badge">
+            <div class="badge-dot"></div>
+            Devis clair avant intervention
+          </div>
+          <div class="badge">
+            <div class="badge-dot"></div>
+            Garantie main-d’œuvre & pièces
+          </div>
+        </div>
+
+        <div class="hero-cta-row">
+          <button class="btn-primary" data-scroll="#contact">
+            Appeler un plombier
+          </button>
+          <button class="btn-secondary" data-scroll="#devis">
+            Estimer mon intervention
+          </button>
+        </div>
+
+        <div class="hero-note">
+          <b>Transparence totale :</b> chaque déplacement est précédé d’un devis détaillé, validé avec vous par téléphone ou e-mail.
+        </div>
+      </div>
+
+      <aside class="hero-right-card" aria-label="Indicateurs de confiance">
+        <div class="hero-right-content">
+          <div class="hero-mini-title">Votre confort, notre priorité</div>
+          <div class="hero-metric-row">
+            <div>
+              <div class="hero-metric-main">98% de clients satisfaits</div>
+              <div class="hero-metric-sub">
+                Basé sur les avis collectés après intervention (débouchage, réparation, installation).
+              </div>
+            </div>
+            <div class="hero-metric-tag">Avis vérifiés</div>
+          </div>
+
+          <div class="hero-grid">
+            <div class="hero-grid-card">
+              <div class="hero-grid-label">Temps moyen d’intervention</div>
+              <div class="hero-grid-value">&lt; 45 minutes</div>
+              <div class="hero-grid-label">Selon disponibilité et zone d’intervention.</div>
+            </div>
+            <div class="hero-grid-card">
+              <div class="hero-grid-label">Urgence & rendez-vous</div>
+              <div class="hero-grid-value">7j/7</div>
+              <div class="hero-grid-label">Plage horaire élargie pour s’adapter à votre emploi du temps.</div>
+            </div>
+            <div class="hero-grid-card">
+              <div class="hero-grid-label">Interventions réalisées</div>
+              <div class="hero-grid-value">+1500 / an</div>
+              <div class="hero-grid-label">En domicile, bureaux, commerces et copropriétés.</div>
+            </div>
+            <div class="hero-grid-card">
+              <div class="hero-grid-label">Zone d’intervention</div>
+              <div class="hero-grid-value">VotreVille & alentours</div>
+              <div class="hero-grid-label">Centre-ville, périphérie et communes voisines.</div>
+            </div>
+          </div>
+
+          <div class="hero-status-row">
+            <div class="hero-status-pill">
+              ● Plombier disponible aujourd’hui
+            </div>
+            <div>
+              <span style="color:#a5f3fc;">Besoin d’un avis ?</span> Envoyez-nous des photos par e-mail et obtenez une première estimation gratuite.
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section">
+      <div class="section-header">
+        <div>
+          <div class="section-tag">Services de plomberie</div>
+          <h2 class="section-title">Tout ce qu’il faut pour une plomberie saine et durable.</h2>
+          <p class="section-subtitle">
+            De l’urgence à la rénovation complète, nous vous accompagnons du diagnostic à la finition, en passant par le conseil.
+          </p>
+        </div>
+      </div>
+
+      <div class="card-grid">
+        <article class="card">
+          <div class="card-icon">💧</div>
+          <h3 class="card-title">Dépannage & urgence</h3>
+          <p class="card-text">
+            Fuite d’eau, dégât des eaux, évier ou WC bouchés : nous sécurisons les lieux et rétablissons la situation en priorité.
+          </p>
+          <ul class="card-list">
+            <li><span>•</span> Recherche & réparation de fuites visibles ou encastrées.</li>
+            <li><span>•</span> Débouchage de canalisations, colonnes, siphons.</li>
+            <li><span>•</span> Mise en sécurité et conseil pour éviter un nouveau sinistre.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">🚿</div>
+          <h3 class="card-title">Installation & rénovation</h3>
+          <p class="card-text">
+            Création ou rénovation de salle de bain, cuisine, buanderie : nous assurons un travail propre, aligné sur vos usages.
+          </p>
+          <ul class="card-list">
+            <li><span>•</span> Pose de douches, baignoires, meubles vasques & robinetterie.</li>
+            <li><span>•</span> Rénovation de réseaux d’alimentation & évacuation.</li>
+            <li><span>•</span> Coordination avec autres corps de métier sur demande.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">🔥</div>
+          <h3 class="card-title">Chauffe-eau & confort</h3>
+          <p class="card-text">
+            Un ballon qui tombe en panne, de l’eau tiède, un débit irrégulier ? Nous intervenons et vous guidons vers la bonne solution.
+          </p>
+          <ul class="card-list">
+            <li><span>•</span> Dépannage & remplacement de chauffe-eau électrique.</li>
+            <li><span>•</span> Entretien, détartrage & mise en conformité.</li>
+            <li><span>•</span> Optimisation de la consommation & du confort.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Urgence -->
+    <section id="urgence" class="section">
+      <div class="section-header">
+        <div>
+          <div class="section-tag">Urgence plomberie</div>
+          <h2 class="section-title">Une fuite ? Une canalisation bouchée ? Ne perdez pas une minute.</h2>
+          <p class="section-subtitle">
+            Plus vous agissez rapidement, plus vous limitez les dégâts. Nous priorisons les urgences pour sécuriser votre logement ou votre local.
+          </p>
+        </div>
+      </div>
+
+      <div class="emergency-section">
+        <div>
+          <div class="emergency-badge">
+            Alerte fuite ou dégât des eaux
+          </div>
+          <h3 class="emergency-title">Un plombier peut être dépêché rapidement selon votre secteur.</h3>
+          <p class="emergency-text">
+            Coupez l’eau, prenez quelques photos, et appelez-nous : nous analysons la situation, estimons le coût et planifions immédiatement l’intervention.
+          </p>
+          <div class="emergency-phone">
+            06 12 34 56 78
+            <span>(numéro direct plombier)</span>
+          </div>
+          <div class="emergency-tagline">
+            Ligne prioritaire en cas de fuite active, d’odeur suspecte ou de risque de dégât des eaux.
+          </div>
+        </div>
+
+        <div class="emergency-grid">
+          <div class="emergency-small-card">
+            <div class="emergency-label">Les bons réflexes avant notre arrivée</div>
+            <div>
+              • Fermez le robinet d’arrêt principal.<br>
+              • Protégez vos biens sensibles (électricité, meubles).<br>
+              • Notez l’origine visible de la fuite si possible.
+            </div>
+          </div>
+          <div class="emergency-small-card">
+            <div class="emergency-label">Ce que nous faisons sur place</div>
+            <div>
+              • Diagnostic précis et réparation immédiate si possible.<br>
+              • Devis détaillé avant toute intervention lourde.<br>
+              • Compte-rendu pour assurance si nécessaire.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Devis & Tarifs -->
+    <section id="devis" class="section">
+      <div class="section-header">
+        <div>
+          <div class="section-tag">Devis & estimation</div>
+          <h2 class="section-title">Un devis clair, sans surprise, avant chaque intervention.</h2>
+          <p class="section-subtitle">
+            Expliquez-nous votre besoin, joignez éventuellement des photos, et recevez une estimation transparente par e-mail ou téléphone.
+          </p>
+        </div>
+      </div>
+
+      <div class="split-layout">
+        <div>
+          <div class="text-block">
+            <p>
+              Chaque situation est différente : une fuite accessible n’a pas le même coût qu’une recherche de fuite encastrée,
+              une robinetterie standard n’a pas le même prix qu’un modèle haut de gamme.
+            </p>
+            <p>
+              C’est pourquoi nous fonctionnons <b>au cas par cas</b>, sur la base de photos, d’une description précise
+              et, si besoin, d’une première visite de diagnostic.
+            </p>
+          </div>
+
+          <div class="price-grid">
+            <div class="price-card">
+              <div class="price-name">Déplacement & diagnostic</div>
+              <div class="price-range">à partir de 49€ TTC</div>
+              <div class="price-note">Déductible en cas d’acceptation du devis.</div>
+            </div>
+            <div class="price-card">
+              <div class="price-name">Dépannage courant</div>
+              <div class="price-range">entre 90€ et 220€ TTC</div>
+              <div class="price-note">Fuite simple, débouchage, petite réparation.</div>
+            </div>
+            <div class="price-card">
+              <div class="price-name">Installation / rénovation</div>
+              <div class="price-range">sur devis détaillé</div>
+              <div class="price-note">Salle de bain, cuisine, réseaux complets.</div>
+            </div>
+            <div class="price-card">
+              <div class="price-name">Contrats d’entretien</div>
+              <div class="price-range">formule sur mesure</div>
+              <div class="price-note">Copropriété, locaux pros, gestion locative.</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="form-card">
+            <h3 class="form-title">Demande de devis en ligne</h3>
+            <p class="form-hint">
+              Décrivez votre besoin et nous vous recontactons avec une estimation gratuite. Les champs marqués d’un <span>*</span> sont obligatoires.
+            </p>
+            <form id="quote-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">Nom complet <span>*</span></label>
+                  <input type="text" name="name" class="form-input" placeholder="Ex : Dupont Martin">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">E-mail <span>*</span></label>
+                  <input type="email" name="email" class="form-input" placeholder="vous@example.com">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">Téléphone <span>*</span></label>
+                  <input type="tel" name="phone" class="form-input" placeholder="06 12 34 56 78">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Code postal / Ville <span>*</span></label>
+                  <input type="text" name="city" class="form-input" placeholder="75000 Paris">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Type de besoin <span>*</span></label>
+                <select name="service" class="form-select">
+                  <option value="">Choisissez un type d’intervention</option>
+                  <option value="urgence">Urgence (fuite, dégât des eaux, canalisation bouchée)</option>
+                  <option value="installation">Installation (sanitaires, robinetterie, chauffe-eau…)</option>
+                  <option value="renovation">Rénovation salle de bain / cuisine</option>
+                  <option value="autre">Autre besoin (précisez ci-dessous)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Description du problème <span>*</span></label>
+                <textarea name="message" class="form-textarea" placeholder="Expliquez le contexte, ce que vous constatez, l’ancienneté du problème, etc."></textarea>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Urgence estimée</label>
+                <select name="urgency" class="form-select">
+                  <option value="">Sélectionnez</option>
+                  <option value="immediat">Fuite / Urgence immédiate</option>
+                  <option value="48h">Intervention souhaitée sous 24/48h</option>
+                  <option value="semaine">Intervention à planifier dans la semaine</option>
+                  <option value="etude">Étude de projet / rénovation</option>
+                </select>
+              </div>
+
+              <div class="form-footer">
+                <div class="form-status" id="quote-status"></div>
+                <button type="submit" class="btn-primary">
+                  Envoyer ma demande
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- À propos & Avis -->
+    <section id="apropos" class="section">
+      <div class="section-header">
+        <div>
+          <div class="section-tag">Confiance & témoignages</div>
+          <h2 class="section-title">Un plombier de proximité, recommandé par ses clients.</h2>
+          <p class="section-subtitle">
+            Notre priorité : intervenir rapidement, laisser les lieux propres et vous expliquer ce que nous faisons,
+            avant, pendant et après l’intervention.
+          </p>
+        </div>
+      </div>
+
+      <div class="about-layout">
+        <div>
+          <div class="about-text">
+            <p>
+              Artisan plombier, nous avons construit notre réputation sur la <b>transparence</b>, la <b>pédagogie</b>
+              et la <b>fiabilité</b>. Pas de jargon incompréhensible, pas de devis approximatif : chaque intervention est expliquée et justifiée.
+            </p>
+            <p>
+              Nous intervenons en habitat individuel, collectif, locaux commerciaux et bureaux, en lien avec les
+              syndics, agences immobilières et gestionnaires de patrimoine lorsque nécessaire.
+            </p>
+          </div>
+
+          <ul class="list-check">
+            <li><span>✓</span> Devis détaillé et validé avant toute intervention.</li>
+            <li><span>✓</span> Interventions planifiées pour limiter au maximum votre indisponibilité.</li>
+            <li><span>✓</span> Matériel sélectionné pour sa fiabilité et sa durabilité.</li>
+            <li><span>✓</span> Explications claires sur les gestes de prévention à adopter.</li>
+          </ul>
+        </div>
+
+        <aside class="reviews-card">
+          <div class="stars">★★★★★</div>
+          <div class="review-text">
+            « Intervention ultra rapide pour une fuite sous évier. Tout m’a été expliqué clairement, photos à l’appui.
+            Devis respecté au centime près, je recommande. »
+          </div>
+          <div class="review-author">Claire M.</div>
+          <div class="review-meta">Intervention fuite cuisine • VotreVille</div>
+
+          <div class="reviews-small">
+            <div class="reviews-kpi">
+              <strong>4,9/5</strong>
+              Note moyenne sur les avis clients vérifiés.
+            </div>
+            <div class="reviews-kpi">
+              <strong>+1500</strong>
+              Interventions réalisées sans litige ni surprise de facturation.
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="section-header">
+        <div>
+          <div class="section-tag">Contact & prise de rendez-vous</div>
+          <h2 class="section-title">Parlez-nous de votre projet ou de votre urgence.</h2>
+          <p class="section-subtitle">
+            Utilisez le formulaire ci-dessous ou contactez-nous directement par téléphone.
+            Nous revenons vers vous dans les meilleurs délais.
+          </p>
+        </div>
+      </div>
+
+      <div class="contact-layout">
+        <div>
+          <div class="form-card">
+            <h3 class="form-title">Formulaire de contact</h3>
+            <p class="form-hint">
+              Pour une urgence, privilégiez l’appel téléphonique. Pour un projet, décrivez votre besoin le plus précisément possible.
+            </p>
+            <form id="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">Nom complet <span>*</span></label>
+                  <input type="text" name="name" class="form-input" placeholder="Nom & prénom">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">E-mail <span>*</span></label>
+                  <input type="email" name="email" class="form-input" placeholder="vous@example.com">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">Téléphone</label>
+                  <input type="tel" name="phone" class="form-input" placeholder="Facultatif mais recommandé">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Objet du message <span>*</span></label>
+                  <input type="text" name="subject" class="form-input" placeholder="Ex : fuite salle de bain, projet rénovation...">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Message <span>*</span></label>
+                <textarea name="message" class="form-textarea" placeholder="Expliquez votre situation, vos disponibilités, etc."></textarea>
+              </div>
+
+              <div class="form-footer">
+                <div class="form-status" id="contact-status"></div>
+                <button type="submit" class="btn-primary">
+                  Envoyer mon message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <aside class="contact-info-block">
+          <div class="info-row">
+            <div class="info-label">Téléphone</div>
+            <div class="info-value">06 12 34 56 78</div>
+          </div>
+          <div class="info-row">
+            <div class="info-label">E-mail</div>
+            <div class="info-value">contact@votreplombier.fr</div>
+          </div>
+          <div class="info-row">
+            <div class="info-label">Adresse</div>
+            <div class="info-value">12 Rue des Artisans, 75000 VotreVille</div>
+          </div>
+          <div class="info-row">
+            <div class="info-label">Horaires habituels</div>
+            <div class="info-value">Lundi – Vendredi : 8h00 – 19h00<br>Samedi & Dimanche : sur rendez-vous</div>
+          </div>
+
+          <div class="info-badges">
+            <div class="info-badge">Intervention domicile & locaux pros</div>
+            <div class="info-badge">Devis gratuit hors déplacement</div>
+            <div class="info-badge">Partenariats syndics & agences</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        © <span id="year"></span> Votre Plombier de Confiance – Tous droits réservés.
+      </div>
+      <div class="footer-links">
+        <a href="#accueil">Accueil</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-badge">
+        Site optimisé pour le référencement local & la prise de contact rapide.
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script>
+  // Année dynamique
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Navigation active / smooth scroll
+  function smoothScrollTo(targetSelector) {
+    var target = document.querySelector(targetSelector);
+    if (!target) return;
+    var headerOffset = 70;
+    var elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
+    var offsetPosition = elementPosition - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+  }
+
+  document.querySelectorAll('[data-scroll]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var selector = btn.getAttribute('data-scroll');
+      smoothScrollTo(selector);
+    });
+  });
+
+  document.querySelectorAll('a.nav-link, .mobile-link').forEach(function (link) {
+    link.addEventListener('click', function (event) {
+      var href = link.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        event.preventDefault();
+        smoothScrollTo(href);
+
+        var links = document.querySelectorAll('a.nav-link');
+        links.forEach(function (lnk) { lnk.classList.remove('nav-link-active'); });
+        var desktopLink = document.querySelector('a.nav-link[href="' + href + '"]');
+        if (desktopLink) desktopLink.classList.add('nav-link-active');
+      }
+    });
+  });
+
+  // Menu burger
+  var burgerButton = document.getElementById('burger-button');
+  var mobileMenu = document.getElementById('mobile-menu');
+  if (burgerButton && mobileMenu) {
+    burgerButton.addEventListener('click', function () {
+      var isOpen = burgerButton.classList.toggle('burger-open');
+      mobileMenu.style.display = isOpen ? 'block' : 'none';
+    });
+
+    mobileMenu.querySelectorAll('a, button').forEach(function (el) {
+      el.addEventListener('click', function () {
+        burgerButton.classList.remove('burger-open');
+        mobileMenu.style.display = 'none';
+      });
+    });
+  }
+
+  // Validation simple de formulaire (frontend)
+  function validateRequiredFields(form, fields) {
+    var valid = true;
+    fields.forEach(function (selector) {
+      var field = form.querySelector(selector);
+      if (field) {
+        if (!field.value.trim()) {
+          field.style.borderColor = 'rgba(248, 113, 113, 0.9)';
+          valid = false;
+        } else {
+          field.style.borderColor = 'rgba(148, 163, 184, 0.6)';
+        }
+      }
+    });
+    return valid;
+  }
+
+  // Formulaire devis
+  var quoteForm = document.getElementById('quote-form');
+  var quoteStatus = document.getElementById('quote-status');
+
+  if (quoteForm) {
+    quoteForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      if (!validateRequiredFields(quoteForm, ['input[name="name"]', 'input[name="email"]', 'input[name="phone"]', 'input[name="city"]', 'select[name="service"]', 'textarea[name="message"]'])) {
+        quoteStatus.textContent = 'Merci de remplir tous les champs obligatoires.';
+        quoteStatus.classList.remove('form-status-success');
+        quoteStatus.classList.add('form-status-error');
+        return;
+      }
+
+      quoteStatus.textContent = 'Votre demande a été prise en compte. Vous serez recontacté(e) rapidement.';
+      quoteStatus.classList.remove('form-status-error');
+      quoteStatus.classList.add('form-status-success');
+
+      quoteForm.reset();
+    });
+  }
+
+  // Formulaire contact
+  var contactForm = document.getElementById('contact-form');
+  var contactStatus = document.getElementById('contact-status');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      if (!validateRequiredFields(contactForm, ['input[name="name"]', 'input[name="email"]', 'input[name="subject"]', 'textarea[name="message"]'])) {
+        contactStatus.textContent = 'Merci de compléter les champs obligatoires.';
+        contactStatus.classList.remove('form-status-success');
+        contactStatus.classList.add('form-status-error');
+        return;
+      }
+
+      contactStatus.textContent = 'Votre message a bien été envoyé. Nous reviendrons vers vous rapidement.';
+      contactStatus.classList.remove('form-status-error');
+      contactStatus.classList.add('form-status-success');
+
+      contactForm.reset();
+    });
+  }
+
+  /*
+    IMPORTANT POUR L’ENVOI RÉEL DES E-MAILS :
+    ----------------------------------------------------------------
+    Actuellement, les formulaires affichent uniquement un message de succès côté navigateur.
+    Pour envoyer réellement les e-mails ou enregistrer les demandes :
+
+    - soit tu envoies les données vers un script serveur (PHP, Python/Django, Node, etc.)
+      via fetch() ou en action classique du formulaire ;
+    - soit tu utilises un service spécialisé (Formspree, Getform, etc.) en mettant leur URL
+      dans l’attribut action du formulaire.
+
+    Exemple (à adapter côté backend) :
+      fetch('/api/contact/', { method: 'POST', body: JSON.stringify(...), headers: {...} })
+  */
+</script>
+</body>
+</html>
