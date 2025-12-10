@@ -63,7 +63,7 @@
   }
   </script>
 
-  <!-- Police moderne (optionnel) -->
+  <!-- Police moderne -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -111,7 +111,6 @@
       display: block;
     }
 
-    /* Layout général */
     .page-wrapper {
       min-height: 100vh;
       display: flex;
@@ -313,7 +312,6 @@
       transform: rotate(-45deg);
     }
 
-    /* Menu mobile */
     .mobile-menu {
       display: none;
       padding: 0 16px 12px;
@@ -593,7 +591,7 @@
       font-size: 11px;
     }
 
-    /* Sections génériques */
+    /* Sections */
     .section {
       max-width: 1120px;
       margin: 0 auto;
@@ -1122,12 +1120,16 @@
         display: none;
       }
 
-      .burger {
-        display: inline-flex;
+      .nav-cta {
+        gap: 8px;
       }
 
-      .mobile-menu {
-        display: block;
+      .nav-phone {
+        font-size: 12px;
+      }
+
+      .burger {
+        display: inline-flex;
       }
 
       .hero-section {
@@ -1156,6 +1158,20 @@
         align-items: flex-start;
       }
     }
+
+    @media (max-width: 480px) {
+      .nav-inner {
+        padding-inline: 12px;
+      }
+
+      .hero-section {
+        padding-inline: 12px;
+      }
+
+      .section {
+        padding-inline: 12px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1181,7 +1197,7 @@
 
       <div class="nav-cta">
         <div class="nav-phone">
-          24h/24 &nbsp;•&nbsp; <span>06 12 34 56 78</span>
+          24h/24 • <span>06 12 34 56 78</span>
         </div>
         <button class="btn-primary" data-scroll="#devis">
           Demander un devis
@@ -1684,10 +1700,8 @@
 </div>
 
 <script>
-  // Année dynamique
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Navigation active / smooth scroll
   function smoothScrollTo(targetSelector) {
     var target = document.querySelector(targetSelector);
     if (!target) return;
@@ -1723,10 +1737,12 @@
     });
   });
 
-  // Menu burger
   var burgerButton = document.getElementById('burger-button');
   var mobileMenu = document.getElementById('mobile-menu');
+
   if (burgerButton && mobileMenu) {
+    mobileMenu.style.display = 'none';
+
     burgerButton.addEventListener('click', function () {
       var isOpen = burgerButton.classList.toggle('burger-open');
       mobileMenu.style.display = isOpen ? 'block' : 'none';
@@ -1740,7 +1756,6 @@
     });
   }
 
-  // Validation simple de formulaire (frontend)
   function validateRequiredFields(form, fields) {
     var valid = true;
     fields.forEach(function (selector) {
@@ -1757,7 +1772,6 @@
     return valid;
   }
 
-  // Formulaire devis
   var quoteForm = document.getElementById('quote-form');
   var quoteStatus = document.getElementById('quote-status');
 
@@ -1765,7 +1779,14 @@
     quoteForm.addEventListener('submit', function (event) {
       event.preventDefault();
 
-      if (!validateRequiredFields(quoteForm, ['input[name="name"]', 'input[name="email"]', 'input[name="phone"]', 'input[name="city"]', 'select[name="service"]', 'textarea[name="message"]'])) {
+      if (!validateRequiredFields(quoteForm, [
+        'input[name="name"]',
+        'input[name="email"]',
+        'input[name="phone"]',
+        'input[name="city"]',
+        'select[name="service"]',
+        'textarea[name="message"]'
+      ])) {
         quoteStatus.textContent = 'Merci de remplir tous les champs obligatoires.';
         quoteStatus.classList.remove('form-status-success');
         quoteStatus.classList.add('form-status-error');
@@ -1780,7 +1801,6 @@
     });
   }
 
-  // Formulaire contact
   var contactForm = document.getElementById('contact-form');
   var contactStatus = document.getElementById('contact-status');
 
@@ -1788,7 +1808,12 @@
     contactForm.addEventListener('submit', function (event) {
       event.preventDefault();
 
-      if (!validateRequiredFields(contactForm, ['input[name="name"]', 'input[name="email"]', 'input[name="subject"]', 'textarea[name="message"]'])) {
+      if (!validateRequiredFields(contactForm, [
+        'input[name="name"]',
+        'input[name="email"]',
+        'input[name="subject"]',
+        'textarea[name="message"]'
+      ])) {
         contactStatus.textContent = 'Merci de compléter les champs obligatoires.';
         contactStatus.classList.remove('form-status-success');
         contactStatus.classList.add('form-status-error');
@@ -1802,21 +1827,6 @@
       contactForm.reset();
     });
   }
-
-  /*
-    IMPORTANT POUR L’ENVOI RÉEL DES E-MAILS :
-    ----------------------------------------------------------------
-    Actuellement, les formulaires affichent uniquement un message de succès côté navigateur.
-    Pour envoyer réellement les e-mails ou enregistrer les demandes :
-
-    - soit tu envoies les données vers un script serveur (PHP, Python/Django, Node, etc.)
-      via fetch() ou en action classique du formulaire ;
-    - soit tu utilises un service spécialisé (Formspree, Getform, etc.) en mettant leur URL
-      dans l’attribut action du formulaire.
-
-    Exemple (à adapter côté backend) :
-      fetch('/api/contact/', { method: 'POST', body: JSON.stringify(...), headers: {...} })
-  */
 </script>
 </body>
 </html>
